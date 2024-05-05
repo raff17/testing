@@ -43,7 +43,7 @@ def trot():
             "triangle": 0, 
             "L2": 0, 
             "R2": 0, 
-            "ly": 0.7, 
+            "ly": 0, 
             "lx": 0, 
             "rx": 0, 
             "message_rate": 20, 
@@ -103,6 +103,9 @@ def lean():
     
 if __name__ == "__main__":
     activate()
-    # trot()
-    # while True:
-    #     forward()
+    time.sleep(1)
+    trot()
+    time.sleep(1)
+    while True:
+        print("move forward")
+        forward()
