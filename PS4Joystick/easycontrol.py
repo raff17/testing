@@ -111,6 +111,7 @@ if __name__ == "__main__":
     trot()
     time.sleep(1)
     if flag_1 < 10:
+        print(flag_1)
         print("move forward")
         forward()
         time.sleep(1)
