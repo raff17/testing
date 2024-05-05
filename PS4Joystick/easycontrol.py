@@ -67,7 +67,7 @@ def lean():
     arm_pub.send(target_vel)
     
 if __name__ == "__main__":
-    activate()
+    # activate()
     lean()
     # while True:
     #     forward()
