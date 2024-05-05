@@ -54,7 +54,7 @@ def trot():
 
 
 def trot_stop():
-    drive_pub.send({"L1": 0, 
+    drive_pub.send({"L1": 1, 
             "R1": 0, 
             "x": 0, 
             "circle": 0, 
