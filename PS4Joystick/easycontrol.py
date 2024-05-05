@@ -110,9 +110,10 @@ if __name__ == "__main__":
     time.sleep(1)
     trot()
     time.sleep(1)
-    while flag_1 < 10:
+    if flag_1 < 10:
         print("move forward")
         forward()
         time.sleep(1)
         flag_1 += 1
-    trot_stop()
+    else: 
+        trot_stop()
