@@ -85,5 +85,5 @@ def lean():
 if __name__ == "__main__":
     activate()
     trot()
-    while True:
-        forward()
+    # while True:
+    #     forward()
