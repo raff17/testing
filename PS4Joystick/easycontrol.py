@@ -55,7 +55,7 @@ def lean():
     target_vel = {"x": 0.0,
                   "y": 0.8,
                   "z": 0.0, # (r_trigger - l_trigger)/2,
-                  "yaw": 0,  # r_side,
+                  "yaw": 0.6,  # r_side,
                   "pitch": 0, # r_forward,
                   "roll": 0,  # (r_shoulder - l_shoulder),
                   "grip": 0,  # cross - square,
@@ -68,5 +68,6 @@ def lean():
     
 if __name__ == "__main__":
     activate()
-    while True:
-        forward()
+    lean()
+    # while True:
+    #     forward()
