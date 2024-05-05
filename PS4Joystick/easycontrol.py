@@ -68,6 +68,6 @@ def lean():
     
 if __name__ == "__main__":
     activate()
-    lean()
-    # while True:
-    #     forward()
+    # lean()
+    while True:
+        forward()
