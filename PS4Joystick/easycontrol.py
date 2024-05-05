@@ -34,6 +34,23 @@ def activate():
             "dpady": 0, 
             "dpadx": 0})
     
+
+def forward():
+    drive_pub.send({"L1": 0, 
+            "R1": 0, 
+            "x": 0, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0.7, 
+            "lx": 0, 
+            "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
+
 def lean():
     target_vel = {"x": 0.0,
                   "y": 0.8,
@@ -46,9 +63,9 @@ def lean():
                   "reset": 0,  # reset,
                   "resetdock": 0,  #reset_dock,
                   "trueXYZ": 0,  # circle,
-                  "dock": 0}  # triangle}
+                  "dock": 0}  # triangle
     arm_pub.send(target_vel)
     
 if __name__ == "__main__":
     activate()
-    
+    format()
