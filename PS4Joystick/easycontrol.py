@@ -143,13 +143,15 @@ if __name__ == "__main__":
     time.sleep(1)
     trot()
     time.sleep(1)
-    while flag_1 < 10:
+    while True:
         turn_right()
-        print(flag_1)
+    # while flag_1 < 10:
+    #     turn_right()
+    #     print(flag_1)
         # print("move forward")
         # forward()
-        time.sleep(1)
-        flag_1 += 1
+        # time.sleep(1)
+        # flag_1 += 1
     # while flag_1 > 10 and flag_2 < 10:
     #     turn_right()
     # else: 
