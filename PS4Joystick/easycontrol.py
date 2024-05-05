@@ -68,4 +68,4 @@ def lean():
     
 if __name__ == "__main__":
     activate()
-    format()
+    forward()
