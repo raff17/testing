@@ -85,21 +85,54 @@ def forward():
             "ry": 0, 
             "dpady": 0, 
             "dpadx": 0})
+    
 
-def lean():
-    target_vel = {"x": 0.0,
-                  "y": 0.8,
-                  "z": 0.0, # (r_trigger - l_trigger)/2,
-                  "yaw": 0.6,  # r_side,
-                  "pitch": 0, # r_forward,
-                  "roll": 0.8,  # (r_shoulder - l_shoulder),
-                  "grip": 0,  # cross - square,
-                  "hat":  0, # hat,
-                  "reset": 0,  # reset,
-                  "resetdock": 0,  #reset_dock,
-                  "trueXYZ": 0,  # circle,
-                  "dock": 0}  # triangle
-    arm_pub.send(target_vel)
+def right():
+    drive_pub.send({"L1": 0, 
+            "R1": 0, 
+            "x": 0, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx": 0.7, 
+            "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
+
+
+def turn_right():
+    drive_pub.send({"L1": 0, 
+            "R1": 0, 
+            "x": 0, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx": 0, 
+            "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0.8, 
+            "dpady": 0, 
+            "dpadx": 0})
+# def lean():
+#     target_vel = {"x": 0.0,
+#                   "y": 0.8,
+#                   "z": 0.0, # (r_trigger - l_trigger)/2,
+#                   "yaw": 0.6,  # r_side,
+#                   "pitch": 0, # r_forward,
+#                   "roll": 0.8,  # (r_shoulder - l_shoulder),
+#                   "grip": 0,  # cross - square,
+#                   "hat":  0, # hat,
+#                   "reset": 0,  # reset,
+#                   "resetdock": 0,  #reset_dock,
+#                   "trueXYZ": 0,  # circle,
+#                   "dock": 0}  # triangle
+#     arm_pub.send(target_vel)
     
 if __name__ == "__main__":
     flag_1 = 1
@@ -111,10 +144,13 @@ if __name__ == "__main__":
     trot()
     time.sleep(1)
     while flag_1 < 10:
-        print(flag_1)
-        print("move forward")
-        forward()
-        time.sleep(1)
+        turn_right()
+        # print(flag_1)
+        # print("move forward")
+        # forward()
+        # time.sleep(1)
         flag_1 += 1
+    # while flag_1 > 10 and flag_2 < 10:
+    #     turn_right()
     # else: 
     #     trot_stop()
