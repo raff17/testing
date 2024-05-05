@@ -57,7 +57,7 @@ def lean():
                   "z": 0.0, # (r_trigger - l_trigger)/2,
                   "yaw": 0.6,  # r_side,
                   "pitch": 0, # r_forward,
-                  "roll": 0,  # (r_shoulder - l_shoulder),
+                  "roll": 0.8,  # (r_shoulder - l_shoulder),
                   "grip": 0,  # cross - square,
                   "hat":  0, # hat,
                   "reset": 0,  # reset,
