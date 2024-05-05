@@ -61,7 +61,7 @@ def trot_stop():
             "triangle": 0, 
             "L2": 0, 
             "R2": 0, 
-            "ly": 0.7, 
+            "ly": 0, 
             "lx": 0, 
             "rx": 0, 
             "message_rate": 20, 
