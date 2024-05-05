@@ -102,10 +102,17 @@ def lean():
     arm_pub.send(target_vel)
     
 if __name__ == "__main__":
+    flag_1 = 1
+    flag_2 = 2
+    flag_3 = 3
+
     activate()
     time.sleep(1)
     trot()
     time.sleep(1)
-    while True:
+    while flag_1 < 10:
         print("move forward")
         forward()
+        time.sleep(1)
+        flag_1 += 1
+    trot_stop()
