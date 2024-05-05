@@ -148,7 +148,7 @@ if __name__ == "__main__":
         print(flag_1)
         # print("move forward")
         # forward()
-        # time.sleep(1)
+        time.sleep(1)
         flag_1 += 1
     # while flag_1 > 10 and flag_2 < 10:
     #     turn_right()
