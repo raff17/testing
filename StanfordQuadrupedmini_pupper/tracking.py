@@ -1,29 +1,29 @@
-import cv2
+# import the opencv library 
+import cv2 
+  
+  
+# Define the GStreamer pipeline string
+pipeline_string = 'videofilesrc location=path/to/your/video/file ! decodebin ! videoconvert ! videoscale'
 
-def main():
-    # Create a VideoCapture object to capture video from the webcam
-    cap = cv2.VideoCapture(0)  # 0 is the default camera, change it if you have multiple cameras
-    
-    # Loop to continuously capture frames from the webcam
-    while True:
-        # Read a frame from the webcam
-        ret, frame = cap.read()
-        
-        # Check if the frame was read successfully
-        if not ret:
-            print("Error: Failed to read frame.")
-            break
-        
-        # Display the captured frame
-        cv2.imshow("Webcam", frame)
-        
-        # Check for the 'q' key to exit the loop
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-    
-    # Release the VideoCapture object and close all OpenCV windows
-    cap.release()
-    cv2.destroyAllWindows()
-
-if __name__ == "__main__":
-    main()
+# Create a VideoCapture object with the GStreamer pipeline
+cap = cv2.VideoCapture(pipeline_string, cv2.CAP_GSTREAMER)
+  
+while(True): 
+      
+    # Capture the video frame 
+    # by frame 
+    ret, frame = vid.read() 
+  
+    # Display the resulting frame 
+    cv2.imshow('frame', frame) 
+      
+    # the 'q' button is set as the 
+    # quitting button you may use any 
+    # desired button of your choice 
+    if cv2.waitKey(1) & 0xFF == ord('q'): 
+        break
+  
+# After the loop release the cap object 
+vid.release() 
+# Destroy all the windows 
+cv2.destroyAllWindows() 
