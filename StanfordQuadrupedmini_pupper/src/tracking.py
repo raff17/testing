@@ -2,8 +2,11 @@
 import cv2 
   
   
-# define a video capture object 
-vid = cv2.VideoCapture(0) 
+# Define the GStreamer pipeline string
+pipeline_string = 'videofilesrc location=./modules/videoio/src/cap_gstreamer.cpp ! decodebin ! videoconvert ! videoscale'
+
+# Create a VideoCapture object with the GStreamer pipeline
+cap = cv2.VideoCapture(pipeline_string, cv2.CAP_GSTREAMER)
   
 while(True): 
       
