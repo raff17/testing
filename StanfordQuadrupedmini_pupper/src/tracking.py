@@ -1,12 +1,13 @@
 # import the opencv library 
 import cv2 
-  
+
+imagepath = eg.fileopenbox(title='select image file')
   
 # Define the GStreamer pipeline string
 pipeline_string = 'videofilesrc location=./modules/highgui/src/window_gtk.cpp ! decodebin ! videoconvert ! videoscale'
 
 # Create a VideoCapture object with the GStreamer pipeline
-cap = cv2.VideoCapture(pipeline_string, cv2.CAP_GSTREAMER)
+cap = cv2.VideoCapture(0)
   
 while(True): 
       
