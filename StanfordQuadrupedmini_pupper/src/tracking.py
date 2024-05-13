@@ -3,10 +3,10 @@ import cv2
 
   
 # Define the GStreamer pipeline string
-pipeline_string = 'videofilesrc location=/device/video0 ! decodebin ! videoconvert ! videoscale'
+# pipeline_string = 'videofilesrc location=/device/video0 ! decodebin ! videoconvert ! videoscale'
 
 # Create a VideoCapture object with the GStreamer pipeline
-cap = cv2.VideoCapture(pipeline_string, cv2.CAP_GSTREAMER)
+cap = cv2.VideoCapture(0, cv2.CAP_GSTREAMER)
   
 while(True): 
       
