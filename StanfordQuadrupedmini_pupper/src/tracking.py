@@ -3,7 +3,7 @@ import cv2
   
   
 # Define the GStreamer pipeline string
-pipeline_string = 'videofilesrc location=./modules/videoio/src/cap_gstreamer.cpp ! decodebin ! videoconvert ! videoscale'
+pipeline_string = 'videofilesrc location=./modules/highgui/src/window_gtk.cpp ! decodebin ! videoconvert ! videoscale'
 
 # Create a VideoCapture object with the GStreamer pipeline
 cap = cv2.VideoCapture(pipeline_string, cv2.CAP_GSTREAMER)
