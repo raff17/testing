@@ -12,7 +12,7 @@ while(True):
       
     # Capture the video frame 
     # by frame 
-    ret, frame = vid.read() 
+    ret, frame = cap.read() 
   
     # Display the resulting frame 
     cv2.imshow('frame', frame) 
@@ -24,6 +24,6 @@ while(True):
         break
   
 # After the loop release the cap object 
-vid.release() 
+cap.release() 
 # Destroy all the windows 
 cv2.destroyAllWindows() 
